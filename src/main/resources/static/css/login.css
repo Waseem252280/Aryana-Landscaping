@@ -1,0 +1,29 @@
+:root {
+    --primary-color: linear-gradient(to right, rgb(2, 74, 2), rgb(85, 255, 0));
+}
+.profile {
+    width: 75px;
+    height: 75px;
+    background: var(--primary-color);
+    position: absolute;
+}
+img {
+    width: 70px !important;
+    height: 70px !important;
+    position: relative;
+    top: 2px;
+}
+.col-lg-4 {
+    box-shadow: 0px 0px 15px 0px silver !important;
+}
+.login{
+    background: linear-gradient(to right, rgb(2, 74, 2), rgb(85, 255, 0));
+    color: white !important;
+    borders: none !important;
+    font-weight: bold;
+    width: 80px !important;
+}
+.login:hover {
+    background: linear-gradient(to right, rgb(85, 255, 0), rgb(2, 74, 2));
+    width: 100px !important;
+}

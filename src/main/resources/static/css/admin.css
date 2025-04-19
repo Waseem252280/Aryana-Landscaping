@@ -1,0 +1,29 @@
+.box {
+    border: 2px dotted #0558fd7c !important;
+    border-radius: 15px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box:hover{
+    background-color: rgba(188, 194, 191, 0.387);
+}
+.modal-btn{
+    background: linear-gradient(to right, green, yellowgreen, yellow);
+}
+.modal-btn:hover{
+    background: linear-gradient(to right, yellow, yellowgreen, green);
+}
+.box i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.nav-link .bi {
+    color: green;
+    margin-right: 5px;
+}
+#cardFooter{
+    font-size: 15px !important;
+}
