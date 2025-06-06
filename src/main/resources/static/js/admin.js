@@ -28,8 +28,8 @@ function updateSettings() {
         isValid = false;
     }
 
-    if (currentPassword && !newPassword) {
-        document.getElementById('newPasswordError').innerText = 'New password is required.';
+    if (newPassword && !currentPassword) {
+        document.getElementById('currentPasswordError').innerText = 'Current password is required.';
         isValid = false;
     } else if (newPassword && newPassword.length < 5) {
         document.getElementById('newPasswordError').innerText = 'New password must be at least 5 characters.';

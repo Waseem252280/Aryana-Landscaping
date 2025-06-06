@@ -2,14 +2,13 @@ package com.aryana_landscaping.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AryanaLandscaping_Controller{
                                     //home
-    @RequestMapping("/")
+    @GetMapping("/")
     public String home() {
-        return "home"; // Resolves to /WEB-INF/views/home.jsp
+        return "index"; // Resolves to /WEB-INF/views/index.jsp
     }
 
                                     //about us
@@ -67,11 +66,11 @@ public class AryanaLandscaping_Controller{
     //services
     @GetMapping("/landscapingservice")
     public String landscapingservice() {
-        return "landscapingservice"; // Resolves to /WEB-INF/views/home.jsp
+        return "landscapingservice"; // Resolves to /WEB-INF/views/index.jsp
     }
     @GetMapping("/gardeningservice")
     public String gardeningservice() {
-        return "gardeningservice"; // Resolves to /WEB-INF/views/home.jsp
+        return "gardeningservice"; // Resolves to /WEB-INF/views/index.jsp
     }
     @GetMapping("/waterfeatures")
     public String waterfeatures() {

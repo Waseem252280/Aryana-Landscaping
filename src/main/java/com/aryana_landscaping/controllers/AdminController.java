@@ -6,8 +6,8 @@ import com.aryana_landscaping.Entity.Video;
 import com.aryana_landscaping.Repository.PhotoRepository;
 import com.aryana_landscaping.Repository.UserRepository;
 import com.aryana_landscaping.Repository.VideoRepository;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -190,41 +190,49 @@ public class AdminController {
     //updateSettings
     @Transactional
     @PostMapping("/updateSettings")
-    public String updateSettings(@RequestParam(name = "userId", required = true) Long userId,
+    public String updateSettings(@RequestParam(name = "userId") Long userId,
                                  @RequestParam(name = "userName", required = false) String userName,
                                  @RequestParam(name = "currentPassword", required = false) String currentPassword,
                                  @RequestParam(name = "newPassword", required = false) String newPassword,
                                  @RequestParam(name = "profile", required = false) MultipartFile profile,
-                                 RedirectAttributes redirectAttributes,HttpSession session,
+                                 RedirectAttributes redirectAttributes,
+                                 HttpSession session,
                                  HttpServletRequest request) {
 
-        User existingUser = userRepository.findById(userId).orElse(null); // Assuming userId is available in the context
+        User existingUser = userRepository.findById(userId).orElse(null);
         if (existingUser == null) {
-            // Handle user not found case
             redirectAttributes.addFlashAttribute("error", "User not found!");
             return "redirect:/admin";
         }
 
+        boolean isChangingProfileOrUsername =
+                (userName != null && !userName.isEmpty()) ||
+                        (profile != null && !profile.isEmpty());
+
+        boolean isChangingPassword = (newPassword != null && !newPassword.isEmpty());
+
+        // Rule: Current password must be provided if changing username, profile, or password
+        if ((isChangingProfileOrUsername || isChangingPassword) &&
+                (currentPassword == null || !existingUser.getCurrentPassword().equals(currentPassword))) {
+            redirectAttributes.addFlashAttribute("error", "Current password is required or incorrect!");
+            return "redirect:/admin";
+        }
+
+        // Update username
         if (userName != null && !userName.isEmpty()) {
             existingUser.setUserName(userName);
         }
 
-        if (currentPassword != null && newPassword != null) {
-            if (existingUser.getCurrentPassword().equals(currentPassword)) {
-                existingUser.setCurrentPassword(newPassword);
-            } else {
-                redirectAttributes.addFlashAttribute("error", "Current password is incorrect!");
-                return "redirect:/admin";
-            }
-        }
-
+        // Update profile
         if (profile != null && !profile.isEmpty()) {
             try {
                 String previousProfile = existingUser.getProfile();
                 if (previousProfile != null && !previousProfile.isEmpty()) {
                     Files.deleteIfExists(Paths.get(profileDirectory, previousProfile));
                 }
-                Files.copy(profile.getInputStream(), Paths.get(profileDirectory, profile.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+                Files.copy(profile.getInputStream(),
+                        Paths.get(profileDirectory, profile.getOriginalFilename()),
+                        StandardCopyOption.REPLACE_EXISTING);
                 existingUser.setProfile(profile.getOriginalFilename());
             } catch (IOException e) {
                 redirectAttributes.addFlashAttribute("error", "Failed to update profile picture!");
@@ -233,14 +241,19 @@ public class AdminController {
             }
         }
 
-        userRepository.save(existingUser);
-        redirectAttributes.addFlashAttribute("success", "Settings updated successfully.");
-        User existingUser1 = userRepository.findById(userId).orElse(null); // Assuming userId is available in the context
-        if (existingUser1!=null){
-            session.invalidate();
-            session = request.getSession(true);
-            session.setAttribute("user", existingUser1);
+        // Update password
+        if (isChangingPassword) {
+            existingUser.setCurrentPassword(newPassword);
         }
+
+        userRepository.save(existingUser);
+
+        // Refresh session
+        session.invalidate();
+        session = request.getSession(true);
+        session.setAttribute("user", existingUser);
+
+        redirectAttributes.addFlashAttribute("success", "Settings updated successfully.");
         return "redirect:/admin";
     }
 
