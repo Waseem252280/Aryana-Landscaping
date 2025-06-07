@@ -44,39 +44,39 @@ public class AdminController {
     }
 
     //add photos
-    @PostMapping("/addPhotos")
-    public String uploadMultiplePhotos(@RequestParam("photos") MultipartFile[] files, RedirectAttributes redirectAttributes) {
-        List<Photo> photos = new ArrayList<>();
-        boolean hasErrors = false;
-
-        for (MultipartFile file : files) {
-            if (!file.isEmpty()) {
-                try {
-                    // Save metadata in database
-                    Photo photo = new Photo();
-                    photo.setName(file.getOriginalFilename());
-                    photo.setType(file.getContentType());
-                    photos.add(photo);
-
-                    // Save file to static directory
-                    Files.copy(file.getInputStream(), Paths.get(photoPath, file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
-                } catch (IOException e) {
-                    hasErrors = true;
-                    redirectAttributes.addFlashAttribute("error", "Photos uploading failed!");
-                    e.printStackTrace();
-                    break;
-                }
-            }
-        }
-
-        if (!hasErrors) {
-            photoRepository.saveAll(photos);
-            redirectAttributes.addFlashAttribute("success", "Photos uploaded successfully.");
-            return "redirect:/deletePhotos";
-        } else {
-            return "redirect:/deletePhotos";
-        }
-    }
+//    @PostMapping("/addPhotos")
+//    public String uploadMultiplePhotos(@RequestParam("photos") MultipartFile[] files, RedirectAttributes redirectAttributes) {
+//        List<Photo> photos = new ArrayList<>();
+//        boolean hasErrors = false;
+//
+//        for (MultipartFile file : files) {
+//            if (!file.isEmpty()) {
+//                try {
+//                    // Save metadata in database
+//                    Photo photo = new Photo();
+//                    photo.setName(file.getOriginalFilename());
+//                    photo.setType(file.getContentType());
+//                    photos.add(photo);
+//
+//                    // Save file to static directory
+//                    Files.copy(file.getInputStream(), Paths.get(photoPath, file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+//                } catch (IOException e) {
+//                    hasErrors = true;
+//                    redirectAttributes.addFlashAttribute("error", "Photos uploading failed!");
+//                    e.printStackTrace();
+//                    break;
+//                }
+//            }
+//        }
+//
+//        if (!hasErrors) {
+//            photoRepository.saveAll(photos);
+//            redirectAttributes.addFlashAttribute("success", "Photos uploaded successfully.");
+//            return "redirect:/deletePhotos";
+//        } else {
+//            return "redirect:/deletePhotos";
+//        }
+//    }
 
     //deletePhotos
     @GetMapping("/deletePhotos")
@@ -87,33 +87,33 @@ public class AdminController {
     }
 
     //deleteSinglePhoto
-    @GetMapping("/deleteSinglePhoto/{id}")
-    public String deleteSinglePhoto(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
-        Photo photo = photoRepository.findById(id).orElse(null);
-        if (photo != null) {
-            // Delete the photo entity from the database
-            photoRepository.delete(photo);
-
-            // Construct the path to the image file
-            Path imagePath = Paths.get(photoPath, photo.getName());
-
-            // Delete the image file if it exists
-            try {
-                File file = imagePath.toFile();
-                if (file.exists()) {
-                    Files.delete(imagePath);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println(e.getMessage());
-            }
-
-            redirectAttributes.addFlashAttribute("success", "Image file deleted successfully.");
-        } else {
-            redirectAttributes.addFlashAttribute("error", "Photo not found!");
-        }
-        return "redirect:/deletePhotos";
-    }
+//    @GetMapping("/deleteSinglePhoto/{id}")
+//    public String deleteSinglePhoto(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
+//        Photo photo = photoRepository.findById(id).orElse(null);
+//        if (photo != null) {
+//            // Delete the photo entity from the database
+//            photoRepository.delete(photo);
+//
+//            // Construct the path to the image file
+//            Path imagePath = Paths.get(photoPath, photo.getName());
+//
+//            // Delete the image file if it exists
+//            try {
+//                File file = imagePath.toFile();
+//                if (file.exists()) {
+//                    Files.delete(imagePath);
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                System.out.println(e.getMessage());
+//            }
+//
+//            redirectAttributes.addFlashAttribute("success", "Image file deleted successfully.");
+//        } else {
+//            redirectAttributes.addFlashAttribute("error", "Photo not found!");
+//        }
+//        return "redirect:/deletePhotos";
+//    }
 
     //deleteVideos
     @GetMapping("/deleteVideos")
@@ -123,69 +123,69 @@ public class AdminController {
         return "deleteVideos";
     }
 
-    //add Videos
-    @PostMapping("/addVideos")
-    public String uploadMultipleVideos(@RequestParam("videos") MultipartFile[] files, RedirectAttributes redirectAttributes) {
-        List<Video> videos = new ArrayList<>();
-        boolean hasErrors = false;
-
-        for (MultipartFile file : files) {
-            if (!file.isEmpty()) {
-                try {
-                    // Save metadata in database
-                    Video video = new Video();
-                    video.setName(file.getOriginalFilename());
-                    video.setType(file.getContentType());
-                    videos.add(video);
-
-                    // Save file to static directory
-                    Files.copy(file.getInputStream(), Paths.get(videoDirectory, file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
-                } catch (IOException e) {
-                    hasErrors = true;
-                    redirectAttributes.addFlashAttribute("error", "Videos uploading failed!");
-                    e.printStackTrace();
-                    break;
-                }
-            }
-        }
-
-        if (!hasErrors) {
-            videoRepository.saveAll(videos);
-            redirectAttributes.addFlashAttribute("success", "Videos uploaded successfully.");
-            return "redirect:/deleteVideos";
-        } else {
-            return "redirect:/deleteVideos";
-        }
-    }
+//    //add Videos
+//    @PostMapping("/addVideos")
+//    public String uploadMultipleVideos(@RequestParam("videos") MultipartFile[] files, RedirectAttributes redirectAttributes) {
+//        List<Video> videos = new ArrayList<>();
+//        boolean hasErrors = false;
+//
+//        for (MultipartFile file : files) {
+//            if (!file.isEmpty()) {
+//                try {
+//                    // Save metadata in database
+//                    Video video = new Video();
+//                    video.setName(file.getOriginalFilename());
+//                    video.setType(file.getContentType());
+//                    videos.add(video);
+//
+//                    // Save file to static directory
+//                    Files.copy(file.getInputStream(), Paths.get(videoDirectory, file.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+//                } catch (IOException e) {
+//                    hasErrors = true;
+//                    redirectAttributes.addFlashAttribute("error", "Videos uploading failed!");
+//                    e.printStackTrace();
+//                    break;
+//                }
+//            }
+//        }
+//
+//        if (!hasErrors) {
+//            videoRepository.saveAll(videos);
+//            redirectAttributes.addFlashAttribute("success", "Videos uploaded successfully.");
+//            return "redirect:/deleteVideos";
+//        } else {
+//            return "redirect:/deleteVideos";
+//        }
+//    }
 
     //deleteSingleVideo
-    @GetMapping("/deleteSingleVideo/{id}")
-    public String deleteSingleVideo(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
-        Video video = videoRepository.findById(id).orElse(null);
-        if (video != null) {
-            // Delete the photo entity from the database
-            videoRepository.delete(video);
-
-            // Construct the path to the image file
-            Path videoPath = Paths.get(videoDirectory, video.getName());
-
-            // Delete the image file if it exists
-            try {
-                File file = videoPath.toFile();
-                if (file.exists()) {
-                    Files.delete(videoPath);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println(e.getMessage());
-            }
-
-            redirectAttributes.addFlashAttribute("success", "Video file deleted successfully.");
-        } else {
-            redirectAttributes.addFlashAttribute("error", "Video not found!");
-        }
-        return "redirect:/deleteVideos";
-    }
+//    @GetMapping("/deleteSingleVideo/{id}")
+//    public String deleteSingleVideo(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
+//        Video video = videoRepository.findById(id).orElse(null);
+//        if (video != null) {
+//            // Delete the photo entity from the database
+//            videoRepository.delete(video);
+//
+//            // Construct the path to the image file
+//            Path videoPath = Paths.get(videoDirectory, video.getName());
+//
+//            // Delete the image file if it exists
+//            try {
+//                File file = videoPath.toFile();
+//                if (file.exists()) {
+//                    Files.delete(videoPath);
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                System.out.println(e.getMessage());
+//            }
+//
+//            redirectAttributes.addFlashAttribute("success", "Video file deleted successfully.");
+//        } else {
+//            redirectAttributes.addFlashAttribute("error", "Video not found!");
+//        }
+//        return "redirect:/deleteVideos";
+//    }
 
     //updateSettings
     @Transactional

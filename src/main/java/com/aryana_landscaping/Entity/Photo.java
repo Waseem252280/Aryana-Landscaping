@@ -1,10 +1,7 @@
 package com.aryana_landscaping.Entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Photo {
@@ -15,6 +12,18 @@ public class Photo {
 
     private String name;
     private String type;
+
+    @Transient
+    private String url; // This will not be saved in DB
+
+    // Getters and setters
+    public String getUrl() {
+        return "/images/manageablePhotos/" + name;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     // Getters and Setters
     public Long getId() {

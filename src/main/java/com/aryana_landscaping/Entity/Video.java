@@ -9,6 +9,27 @@ public class Video {
     private String name;
     private String type;
 
+    public String getPublicId() {
+        return publicId;
+    }
+
+    public void setPublicId(String publicId) {
+        this.publicId = publicId;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    private String publicId;
+
+    @Transient
+    private String url;
+
+    public String getUrl() {
+        return "/videos/" + name;
+    }
+
     public Long getId() {
         return id;
     }
