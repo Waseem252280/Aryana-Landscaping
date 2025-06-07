@@ -18,7 +18,8 @@ public class Photo {
 
     // Getters and setters
     public String getUrl() {
-        return "/images/manageablePhotos/" + name;
+        return "https://res.cloudinary.com/dqr2rknbm/image/upload/" + this.name + "."+type;
+
     }
 
     public void setUrl(String url) {
