@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.Map;
 
 @Controller
-public class AddVideosToCoudinary {
+public class AddVideosToCloudinary {
 
     @Autowired
     private Cloudinary cloudinary;
@@ -27,7 +27,7 @@ public class AddVideosToCoudinary {
                             RedirectAttributes redirectAttributes) {
         if (videos.length == 0) {
             redirectAttributes.addFlashAttribute("error", "Please select at least one video to upload.");
-            return "redirect:/addVideos";
+            return "redirect:/deleteVideos";
         }
 
         for (MultipartFile video : videos) {
@@ -52,13 +52,13 @@ public class AddVideosToCoudinary {
                 } catch (IOException e) {
                     e.printStackTrace();
                     redirectAttributes.addFlashAttribute("error", "Failed to upload video: " + video.getOriginalFilename());
-                    return "redirect:/addVideos";
+                    return "redirect:/deleteVideos";
                 }
             }
         }
 
         redirectAttributes.addFlashAttribute("success", "Videos uploaded successfully!");
-        return "redirect:/addVideos";
+        return "redirect:/deleteVideos";
     }
 
 

@@ -14,42 +14,45 @@ import java.util.Map;
 
 @Controller
 public class DeleteSinglePhotoFromCloudinary {
+
     @Autowired
     private Cloudinary cloudinary;
+
     @Autowired
     private PhotoRepository photoRepository;
 
     @GetMapping("/deleteSinglePhoto/{id}")
-    public String deleteSinglePhoto(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
+    public String deleteSinglePhoto(@PathVariable("id") Long id,
+                                    RedirectAttributes redirectAttributes) {
+
         Photo photo = photoRepository.findById(id).orElse(null);
 
         if (photo != null) {
             try {
-                // Extract public ID from file name (without extension)
-                String fileName = photo.getName(); // e.g., "garden1.jpg"
-                String publicId = fileName.substring(0, fileName.lastIndexOf(".")); // e.g., "garden1"
+                // Get the correct publicId saved during upload (e.g., "manageablePhotos/garden1")
+                String publicId = photo.getName();
 
-                // Delete from Cloudinary
-                Map result = cloudinary.uploader().destroy("manageablePhotos/" + publicId, ObjectUtils.emptyMap());
+                // Call Cloudinary to delete the image
+                Map result = cloudinary.uploader().destroy(publicId, ObjectUtils.asMap(
+                        "resource_type", "image"
+                ));
 
-                // Check if deleted successfully
                 if ("ok".equals(result.get("result"))) {
-                    // Delete from DB
+                    // Delete from the database
                     photoRepository.delete(photo);
-                    redirectAttributes.addFlashAttribute("success", "Image deleted from Cloudinary and database.");
+                    redirectAttributes.addFlashAttribute("success", "Photo deleted successfully from Cloudinary and database.");
                 } else {
-                    redirectAttributes.addFlashAttribute("error", "Failed to delete image from Cloudinary!");
+                    redirectAttributes.addFlashAttribute("error", "Failed to delete photo from Cloudinary.");
                 }
+
             } catch (Exception e) {
                 e.printStackTrace();
-                redirectAttributes.addFlashAttribute("error", "Error while deleting the image: " + e.getMessage());
+                redirectAttributes.addFlashAttribute("error", "Error while deleting photo: " + e.getMessage());
             }
         } else {
-            redirectAttributes.addFlashAttribute("error", "Photo not found!");
+            redirectAttributes.addFlashAttribute("error", "Photo not found.");
         }
 
         return "redirect:/deletePhotos";
     }
-
-
 }

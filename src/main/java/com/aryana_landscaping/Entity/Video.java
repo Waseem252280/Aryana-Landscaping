@@ -8,6 +8,9 @@ public class Video {
     private Long id;
     private String name;
     private String type;
+    private String publicId;
+    @Transient
+    private String url;
 
     public String getPublicId() {
         return publicId;
@@ -20,11 +23,6 @@ public class Video {
     public void setUrl(String url) {
         this.url = url;
     }
-
-    private String publicId;
-
-    @Transient
-    private String url;
 
     public String getUrl() {
         return url;
