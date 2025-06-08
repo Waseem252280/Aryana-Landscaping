@@ -1,34 +1,36 @@
-HELP.md
+# Ignore build files
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-#*.yml
+# Ignore logs and temp files
 *.log
-### IntelliJ IDEA ###
-.idea
-*.iws
+*.tmp
+
+# Ignore IDE/project files
+.idea/
 *.iml
 *.ipr
-/htmlReport
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+*.iws
+*.class
 
-### VS Code ###
-.vscode/
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment/secret files
+.env
+
+# Maven wrapper files (optional to ignore)
+.mvn/
+mvnw
+mvnw.cmd
+
+# Ignore node_modules if using frontend inside project
+node_modules/
+
+# Ignore large assets (optional)
+*.mp4
+*.zip
+*.apk
+*.rar
+*.tar.gz
+*.7z
