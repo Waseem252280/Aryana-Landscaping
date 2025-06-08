@@ -1,36 +1,27 @@
-# Ignore build files
 target/
-
-# Ignore logs and temp files
-*.log
-*.tmp
-
-# Ignore IDE/project files
+!/.mvn/wrapper/maven-wrapper.jar
 .idea/
-*.iml
-*.ipr
 *.iws
-*.class
-
-# Ignore OS-specific files
+*.iml
+.vscode/
+.apt_generated/
+.factorypath/
+.project
+.classpath
+.settings/
+.springBeans/
+.sts4-cache/
 .DS_Store
 Thumbs.db
-
-# Ignore environment/secret files
+*.log
+*.tmp
 .env
-
-# Maven wrapper files (optional to ignore)
-.mvn/
-mvnw
-mvnw.cmd
-
-# Ignore node_modules if using frontend inside project
+*.key
+*.pem
 node_modules/
-
-# Ignore large assets (optional)
 *.mp4
 *.zip
 *.apk
 *.rar
-*.tar.gz
 *.7z
+*.tar.gz
