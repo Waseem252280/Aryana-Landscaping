@@ -18,8 +18,8 @@ public class Photo {
 
     // Getters and setters
     public String getUrl() {
-        return "https://res.cloudinary.com/dqr2rknbm/image/upload/" + this.name + "."+type;
-
+        String imageType = type.substring(6); //to get the exact image type from type=iamge/png
+        return "https://res.cloudinary.com/dqr2rknbm/image/upload/" + this.name + "."+imageType;
     }
 
     public void setUrl(String url) {
