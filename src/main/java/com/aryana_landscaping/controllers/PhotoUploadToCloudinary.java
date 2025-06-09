@@ -32,7 +32,10 @@ public class PhotoUploadToCloudinary {
             if (!file.isEmpty()) {
                 try {
                     // Upload to Cloudinary
-                    Map uploadResult = cloudinary.uploader().upload(file.getBytes(), Map.of());
+                    Map uploadResult = cloudinary.uploader().upload(file.getBytes(), Map.of(
+                            "resource_type", "image",
+                            "folder", "landscaping_images"
+                    ));
 
                     // Create Photo entity
                     Photo photo = new Photo();

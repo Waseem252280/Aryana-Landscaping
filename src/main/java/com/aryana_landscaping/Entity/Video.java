@@ -25,7 +25,7 @@ public class Video {
     }
 
     public String getUrl() {
-        return "https://res.cloudinary.com/dqr2rknbm/video/upload/v1749457340/videos/"+publicId+"."+type;
+        return "https://res.cloudinary.com/dqr2rknbm/video/upload/v1749457340/"+publicId+"."+type;
     }
 
     public Long getId() {
