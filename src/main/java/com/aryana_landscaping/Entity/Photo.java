@@ -19,7 +19,7 @@ public class Photo {
     // Getters and setters
     public String getUrl() {
         String imageType = type.substring(6); //to get the exact image type from type=iamge/png
-        return "https://res.cloudinary.com/dqr2rknbm/image/upload/" + this.name + "."+imageType;
+        return "https://res.cloudinary.com/dqr2rknbm/image/upload/v1749459714/"+name+"."+imageType;
     }
 
     public void setUrl(String url) {
