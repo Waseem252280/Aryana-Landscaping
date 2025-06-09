@@ -102,21 +102,17 @@
                 <c:choose>
                 <c:when test="${not empty photoList}">
                 <c:forEach var="photo" items="${photoList}" varStatus="status">
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="${photo.url}" class="card-img-top rounded" alt="${photo.name}">
-                        <div class="card-footer d-flex justify-content-between align-items-center cardFooter">
-                            <div>
-                                <small class="d-block text-muted"><span class="fw-bold">Name:</span> ${photo.name}</small>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="${photo.url}" class="card-img-top rounded" alt="${photo.name}">
+                            <div class="card-footer d-flex justify-content-between align-items-center cardFooter">
+                                <a href="/deleteSinglePhoto/${photo.id}" class="btn btn-danger w-100"
+                                   onclick="confirmDelete('${photo.name}')">
+                                    <i class="bi bi-trash"></i> Delete Photo
+                                </a>
                             </div>
-                            <a href="/deleteSinglePhoto/${photo.id}" class="btn btn-outline-danger p-0 pt-2 rounded-circle"
-                               onclick="confirmDelete('${photo.name}')"
-                               style="width: 35px !important; height: 35px !important;">
-                                <i class="bi bi-trash"></i>
-                            </a>
                         </div>
                     </div>
-                </div>
                 <c:if test="${status.index % 4 == 3}">
             </div><div class="row mt-4">
             </c:if>

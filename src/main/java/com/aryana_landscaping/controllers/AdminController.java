@@ -8,6 +8,9 @@ import com.aryana_landscaping.Repository.UserRepository;
 import com.aryana_landscaping.Repository.VideoRepository;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +27,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class AdminController {
@@ -33,6 +37,8 @@ public class AdminController {
     private VideoRepository videoRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private Cloudinary cloudinary;
 
     private static final String photoPath =Paths.get("src/main/resources/static/images/manageablePhotos").toAbsolutePath().toString();
     private static final String videoDirectory =Paths.get("src/main/resources/static/videos").toAbsolutePath().toString();
@@ -188,6 +194,78 @@ public class AdminController {
 //    }
 
     //updateSettings
+//    @Transactional
+//    @PostMapping("/updateSettings")
+//    public String updateSettings(@RequestParam(name = "userId") Long userId,
+//                                 @RequestParam(name = "userName", required = false) String userName,
+//                                 @RequestParam(name = "currentPassword", required = false) String currentPassword,
+//                                 @RequestParam(name = "newPassword", required = false) String newPassword,
+//                                 @RequestParam(name = "profile", required = false) MultipartFile profile,
+//                                 RedirectAttributes redirectAttributes,
+//                                 HttpSession session,
+//                                 HttpServletRequest request) {
+//
+//        User existingUser = userRepository.findById(userId).orElse(null);
+//        if (existingUser == null) {
+//            redirectAttributes.addFlashAttribute("error", "User not found!");
+//            return "redirect:/admin";
+//        }
+//
+//        boolean isChangingProfileOrUsername =
+//                (userName != null && !userName.isEmpty()) ||
+//                        (profile != null && !profile.isEmpty());
+//
+//        boolean isChangingPassword = (newPassword != null && !newPassword.isEmpty());
+//
+//        // Rule: Current password must be provided if changing username, profile, or password
+//        if ((isChangingProfileOrUsername || isChangingPassword) &&
+//                (currentPassword == null || !existingUser.getCurrentPassword().equals(currentPassword))) {
+//            redirectAttributes.addFlashAttribute("error", "Current password is required or incorrect!");
+//            return "redirect:/admin";
+//        }
+//
+//        // Update username
+//        if (userName != null && !userName.isEmpty()) {
+//            existingUser.setUserName(userName);
+//        }
+//
+//        // Update profile
+//        if (profile != null && !profile.isEmpty()) {
+//            try {
+//                String previousProfile = existingUser.getProfile();
+//                if (previousProfile != null && !previousProfile.isEmpty()) {
+//                    Files.deleteIfExists(Paths.get(profileDirectory, previousProfile));
+//                }
+//                Files.copy(profile.getInputStream(),
+//                        Paths.get(profileDirectory, profile.getOriginalFilename()),
+//                        StandardCopyOption.REPLACE_EXISTING);
+//                existingUser.setProfile(profile.getOriginalFilename());
+//            } catch (IOException e) {
+//                redirectAttributes.addFlashAttribute("error", "Failed to update profile picture!");
+//                e.printStackTrace();
+//                return "redirect:/admin";
+//            }
+//        }
+//
+//        // Update password
+//        if (isChangingPassword) {
+//            existingUser.setCurrentPassword(newPassword);
+//        }
+//
+//        userRepository.save(existingUser);
+//
+//        // Refresh session
+//        session.invalidate();
+//        session = request.getSession(true);
+//        session.setAttribute("user", existingUser);
+//
+//        redirectAttributes.addFlashAttribute("success", "Settings updated successfully.");
+//        return "redirect:/admin";
+//    }
+
+
+
+    //cloudinary based update profile
     @Transactional
     @PostMapping("/updateSettings")
     public String updateSettings(@RequestParam(name = "userId") Long userId,
@@ -211,29 +289,37 @@ public class AdminController {
 
         boolean isChangingPassword = (newPassword != null && !newPassword.isEmpty());
 
-        // Rule: Current password must be provided if changing username, profile, or password
         if ((isChangingProfileOrUsername || isChangingPassword) &&
                 (currentPassword == null || !existingUser.getCurrentPassword().equals(currentPassword))) {
             redirectAttributes.addFlashAttribute("error", "Current password is required or incorrect!");
             return "redirect:/admin";
         }
 
-        // Update username
         if (userName != null && !userName.isEmpty()) {
             existingUser.setUserName(userName);
         }
 
-        // Update profile
         if (profile != null && !profile.isEmpty()) {
             try {
-                String previousProfile = existingUser.getProfile();
-                if (previousProfile != null && !previousProfile.isEmpty()) {
-                    Files.deleteIfExists(Paths.get(profileDirectory, previousProfile));
+                // Delete existing image from Cloudinary
+                String previousPublicId = existingUser.getProfilePublicId();
+                if (previousPublicId != null && !previousPublicId.isEmpty()) {
+                    cloudinary.uploader().destroy(previousPublicId, ObjectUtils.emptyMap());
                 }
-                Files.copy(profile.getInputStream(),
-                        Paths.get(profileDirectory, profile.getOriginalFilename()),
-                        StandardCopyOption.REPLACE_EXISTING);
-                existingUser.setProfile(profile.getOriginalFilename());
+
+                // Upload new image to Cloudinary
+                Map uploadResult = cloudinary.uploader().upload(profile.getBytes(), ObjectUtils.emptyMap());
+
+                String publicId = (String) uploadResult.get("public_id");
+                String url = (String) uploadResult.get("secure_url");
+                String format = (String) uploadResult.get("format");
+                String originalFilename = profile.getOriginalFilename();
+
+                existingUser.setProfile(url);
+                existingUser.setProfilePublicId(publicId);
+                existingUser.setProfileType("image/" + format);
+                existingUser.setProfileName(originalFilename);
+
             } catch (IOException e) {
                 redirectAttributes.addFlashAttribute("error", "Failed to update profile picture!");
                 e.printStackTrace();
@@ -241,14 +327,12 @@ public class AdminController {
             }
         }
 
-        // Update password
         if (isChangingPassword) {
             existingUser.setCurrentPassword(newPassword);
         }
 
         userRepository.save(existingUser);
 
-        // Refresh session
         session.invalidate();
         session = request.getSession(true);
         session.setAttribute("user", existingUser);

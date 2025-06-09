@@ -112,13 +112,9 @@
                             Your browser does not support the video tag.
                         </video>
                         <div class="card-footer d-flex justify-content-between align-items-center cardFooter">
-                            <div>
-                                <small class="d-block text-muted"><span class="fw-bold">Name:</span> ${video.name}</small>
-                            </div>
-                            <a href="/deleteSingleVideo/${video.id}" class="btn btn-outline-danger p-0 pt-2 rounded-circle"
-                               onclick="confirmDelete('${video.name}')"
-                               style="width: 35px !important; height: 35px !important;">
-                                <i class="bi bi-trash"></i>
+                            <a href="/deleteSingleVideo/${video.id}" class="btn btn-danger w-100"
+                               onclick="confirmDelete('${video.name}')">
+                                <i class="bi bi-trash"></i> Delete Video
                             </a>
                         </div>
                     </div>

@@ -37,7 +37,7 @@
         </div>
         <div class="d-flex align-items-center">
             <span class="me-2">${sessionScope.user.userName}</span>
-            <img src="images/profile/${sessionScope.user.profile}" alt="Profile" width="40" height="40" class="rounded-circle">
+            <img src="${sessionScope.user.profile}" alt="Profile" width="40" height="40" class="rounded-circle">
         </div>
     </div>
 </nav>
