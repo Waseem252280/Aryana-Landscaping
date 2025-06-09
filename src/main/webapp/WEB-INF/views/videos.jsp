@@ -66,12 +66,11 @@
 <div class="container mt-5">
     <div class="row">
         <c:choose>
-        <c:when test="${not empty videoList}">
-        <c:forEach var="video" items="${videoList}" varStatus="status">
+        <c:when test="${not empty videosList}">
+        <c:forEach var="video" items="${videosList}" varStatus="status">
         <div class="col-md-6 mb-4">
             <video class="w-100 rounded shadow" controls>
                 <source src="${video.url}" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
         <c:if test="${status.index % 2 == 1}">

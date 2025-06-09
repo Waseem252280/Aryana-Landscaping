@@ -25,7 +25,7 @@ public class Video {
     }
 
     public String getUrl() {
-        return url;
+        return "/videos/" + name;
     }
 
     public Long getId() {

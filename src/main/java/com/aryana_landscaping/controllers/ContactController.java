@@ -25,8 +25,8 @@ public class ContactController {
     public String sendMessage(@ModelAttribute ContactForm contactForm, Model model) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setTo("waseemsanjrani35@gmail.com");
-            message.setSubject("Aryana Landscaping & Gardening Works and Maintenance");
+            message.setTo("rasheedite@gmail.com");
+            message.setSubject("Aryana Landscaping & Gardening Works");
             message.setText("Name: " + contactForm.getName() + "\n"
                     + "Phone: " + contactForm.getPhone() + "\n"
                     + "Email: " + contactForm.getEmail() + "\n"

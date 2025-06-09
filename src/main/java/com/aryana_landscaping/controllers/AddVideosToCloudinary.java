@@ -25,7 +25,7 @@ public class AddVideosToCloudinary {
     @PostMapping("/addVideos")
     public String addVideos(@RequestParam("videos") MultipartFile[] videos,
                             RedirectAttributes redirectAttributes) {
-        if (videos.length == 0) {
+        if (videos.length==0) {
             redirectAttributes.addFlashAttribute("error", "Please select at least one video to upload.");
             return "redirect:/deleteVideos";
         }
@@ -60,6 +60,4 @@ public class AddVideosToCloudinary {
         redirectAttributes.addFlashAttribute("success", "Videos uploaded successfully!");
         return "redirect:/deleteVideos";
     }
-
-
 }
