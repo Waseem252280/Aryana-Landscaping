@@ -307,9 +307,11 @@ public class AdminController {
                     cloudinary.uploader().destroy(previousPublicId, ObjectUtils.emptyMap());
                 }
 
-                // Upload new image to Cloudinary
-                Map uploadResult = cloudinary.uploader().upload(profile.getBytes(), ObjectUtils.emptyMap());
-
+// Upload to Cloudinary with resource_type = video
+                Map uploadResult = cloudinary.uploader().upload(profile.getBytes(), ObjectUtils.asMap(
+                        "resource_type", "image",
+                        "folder", "profile"
+                ));
                 String publicId = (String) uploadResult.get("public_id");
                 String url = (String) uploadResult.get("secure_url");
                 String format = (String) uploadResult.get("format");
