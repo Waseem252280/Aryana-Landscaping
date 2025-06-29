@@ -6,9 +6,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pergola Construction</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Pergola Construction in Dubai | Custom Designs by Aryana Landscaping</title>
+    <meta name="description" content="Looking for the best Pergola construction in Dubai? Aryana Landscaping offers wooden, aluminum, and custom pergola design and installation with affordable pricing.">
+    <meta name="keywords" content="Pergola Dubai, Pergola Construction Dubai, Wooden Pergola, Aluminum Pergola, Customized Pergola, Pergola Design Dubai, Pergola Contractors, Pergola Builders, Pergola Supplier Dubai, Garden Pergola Dubai, Villa Pergola UAE">
+
+    <!-- ✅ Open Graph for Social Sharing -->
+    <meta property="og:title" content="Pergola Construction in Dubai | Custom Designs by Aryana Landscaping">
+    <meta property="og:description" content="Top pergola contractors in Dubai offering high-quality wooden, aluminum, and custom pergolas. Contact Aryana Landscaping for beautiful and durable pergola structures.">
+    <meta property="og:image" content="https://www.aryanalandscape.com/images/pergoladesignheading.jpg">
+    <meta property="og:url" content="https://www.aryanalandscape.com/pergola">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon & Styles -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <!-- ✅ JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Pergola Construction",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Aryana Landscaping & Gardening Works and Maintenance",
+                "image": "https://www.aryanalandscape.com/images/pergoladesignheading.jpg",
+                "url": "https://www.aryanalandscape.com/pergola",
+                "telephone": "+971-556736250",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Office No. 404, M3 (Dalmook) Building, Al Marar, Deira",
+                    "addressLocality": "Dubai",
+                    "postalCode": "48670",
+                    "addressCountry": "UAE"
+                }
+            },
+            "serviceType": "Pergola Design and Construction",
+            "areaServed": "Dubai",
+            "description": "Aryana Landscaping provides custom pergola design and construction in Dubai, including wooden, aluminum, and cantilever pergolas with expert craftsmanship."
+        }
+    </script>
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 

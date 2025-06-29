@@ -4,11 +4,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residential Landscaping</title>
+    <title>Residential Landscaping Dubai | Villa Landscaping Experts - Aryana Landscaping</title>
+    <meta name="description" content="Aryana Landscaping offers top-quality residential landscaping in Dubai. We design and maintain villa gardens with contemporary, zen, and luxury styles. Call +971-556736250.">
+    <meta name="keywords" content="Residential landscaping Dubai, Villa landscaping Dubai, Garden landscaping UAE, Aryana Landscaping, Landscaping services Dubai">
+    <meta name="author" content="Aryana Landscaping & Gardening Works and Maintenance">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.aryaanalandscape.com/residential-landscaping"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/residential-landscaping">
+    <meta property="og:title" content="Residential Landscaping Dubai | Villa Landscaping Experts - Aryana Landscaping">
+    <meta property="og:description" content="Top-rated residential landscaping company in Dubai. Aryana Landscaping transforms villas with lush gardens and elegant outdoor spaces.">
+    <meta property="og:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/residentialheading.jpg">
+    <meta property="og:site_name" content="Aryana Landscaping Dubai">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.aryaanalandscape.com/residential-landscaping">
+    <meta name="twitter:title" content="Residential Landscaping Dubai | Villa Landscaping Experts - Aryana Landscaping">
+    <meta name="twitter:description" content="Villa landscaping and residential gardening services by Aryana Landscaping in Dubai. Contemporary, Roman, Zen, and Luxury styles available.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/residentialheading.jpg">
+
+    <!-- Geo & Business Info -->
+    <meta name="geo.region" content="AE-DU" />
+    <meta name="geo.placename" content="Dubai" />
+    <meta name="geo.position" content="25.276987;55.296249" />
+    <meta name="ICBM" content="25.276987, 55.296249" />
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Aryana Landscaping & Gardening Works and Maintenance",
+            "image": "https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/residentialheading.jpg",
+            "url": "https://www.aryaanalandscape.com",
+            "telephone": "+971556736250",
+            "email": "rasheedite@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Office # 404 Dalmook building, Al Marrar Deira",
+                "addressLocality": "Dubai",
+                "addressRegion": "Dubai",
+                "addressCountry": "AE"
+            },
+            "openingHours": "Mo-Sa 09:00-18:00",
+            "priceRange": "$$"
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.svg">
+
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 

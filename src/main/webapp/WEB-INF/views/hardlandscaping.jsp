@@ -6,9 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hard Landscaping</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Hard Landscaping Dubai | Driveways, Patios, Decking | Aryana Landscaping</title>
+    <meta name="description" content="Top-rated hard landscaping services in Dubai by Aryana Landscaping. We design and build driveways, patios, decks, fences, and more with premium materials.">
+    <meta name="keywords" content="Hard Landscaping Dubai, Landscape Contractors UAE, Driveway Construction, Patios and Decks, Garden Hardscape, Outdoor Landscaping Dubai, Aryana Landscaping, Backyard Renovation Dubai">
+
+    <!-- ✅ Open Graph Meta Tags -->
+    <meta property="og:title" content="Hard Landscaping in Dubai | Patios, Decks, Driveways">
+    <meta property="og:description" content="Create a stunning and functional outdoor space with Aryana Landscaping’s expert hardscape design services in Dubai.">
+    <meta property="og:image" content="/images/hardlandscapingheading.jpg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/hardlandscaping">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- ✅ Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 

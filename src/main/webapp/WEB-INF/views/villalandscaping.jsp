@@ -4,9 +4,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa Landscaping</title>
+    <title>Villa Landscaping in Dubai | Aryana Landscaping Services</title>
+    <meta name="description" content="Top-rated villa landscaping services in Dubai. Aryana Landscaping offers expert villa design, backyard landscaping, and front yard makeovers.">
+    <meta name="keywords" content="villa landscaping Dubai, Dubai villa landscape design, villa backyard landscaping, villa front yard landscaping, Aryana Landscaping Dubai">
+    <meta name="author" content="Aryana Landscaping & Gardening Works and Maintenance">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.aryaanalandscape.com/villa-landscaping" />
+
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Villa Landscaping Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Aryana Landscaping transforms Dubai villas with expert backyard, front yard, and full villa landscaping services.">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/villa-landscaping">
+    <meta property="og:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/villa-cover.jpg">
+    <meta property="og:site_name" content="Aryana Landscaping Dubai">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Villa Landscaping Dubai | Front & Backyard Services">
+    <meta name="twitter:description" content="Transform your Dubai villa with Aryana Landscaping’s professional villa landscape design and maintenance services.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/villa-cover.jpg">
+    <meta name="twitter:url" content="https://www.aryaanalandscape.com/villa-landscaping">
+
+    <!-- Local Business Info -->
+    <meta name="geo.region" content="AE-DU" />
+    <meta name="geo.placename" content="Dubai" />
+    <meta name="geo.position" content="25.276987;55.296249" />
+    <meta name="ICBM" content="25.276987, 55.296249" />
+
+    <!-- Structured Data: LocalBusiness & Service -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Villa Landscaping",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Aryana Landscaping & Gardening Works and Maintenance",
+                "image": "https://www.aryaanalandscape.com/favicon.svg",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Dubai",
+                    "addressCountry": "AE"
+                },
+                "url": "https://www.aryaanalandscape.com",
+                "telephone": "+971556736250"
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": "Dubai, UAE"
+            },
+            "description": "Aryana Landscaping provides premium villa landscaping design and construction services for Dubai homeowners including front yard, backyard, and garden transformation."
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>

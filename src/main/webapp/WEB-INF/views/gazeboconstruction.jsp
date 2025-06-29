@@ -6,7 +6,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gazebo Construction</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Gazebo Construction Dubai | Professional Gazebo Contractors - Aryana Landscaping</title>
+    <meta name="description" content="Looking for gazebo construction in Dubai? Aryana Landscaping provides expert gazebo installation, design & building services tailored to your garden or villa.">
+    <meta name="keywords" content="Gazebo Construction Dubai, Gazebo Installation, Gazebo Contractors, Aryana Landscaping, Garden Gazebo UAE, Wooden Gazebo Dubai, Metal Gazebo Dubai, Pergola and Gazebo Builders, Outdoor Structures UAE">
+
+    <!-- ✅ Open Graph for Social Sharing -->
+    <meta property="og:title" content="Top Gazebo Construction Services in Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Hire Dubai’s leading gazebo contractors. Aryana Landscaping delivers custom gazebo designs, high-quality materials, and perfect installations for gardens and villas.">
+    <meta property="og:image" content="/images/gazeboconstructionheading.jpg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/gazeboconstruction">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- ✅ Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <jsp:include page="header.jsp"/>

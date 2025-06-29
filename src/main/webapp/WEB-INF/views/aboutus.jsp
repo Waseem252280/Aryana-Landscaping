@@ -6,7 +6,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>About Us | Aryana Landscaping & Gardening Works Dubai</title>
+    <meta name="description" content="Discover Aryana Landscaping, the leading landscaping and gardening service provider in Dubai. Learn about our passionate team, unmatched quality, and commitment to transforming your outdoor spaces.">
+    <meta name="keywords" content="Aryana Landscaping, Landscaping Dubai, Gardening Dubai, Villa Landscaping, Residential Landscaping, Commercial Landscaping, Artificial Grass Installation, Pergola Construction, Gazebo Construction, Garden Maintenance, Garden Landscaping, Irrigation Services, Pergola Design, Gazebo Design, Water Features, Hard Landscaping, Soft Landscaping, Dubai Landscape Contractors, Gardening, Outdoor Spaces Dubai, Lawn Services, Landscape Architecture, Garden Designers, Backyard Renovation, Gazebos and Pergolas, Dubai Landscaping Experts">
+
+    <!-- ✅ Open Graph (for social sharing) -->
+    <meta property="og:title" content="About Us | Aryana Landscaping & Gardening Works Dubai">
+    <meta property="og:description" content="Get to know Aryana Landscaping — a trusted name for garden design, landscaping, and maintenance services across Dubai.">
+    <meta property="og:image" content="/images/aboutusheading.jpg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/aboutus">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
@@ -56,8 +71,6 @@
     </div>
 </section>
 
-
-
 <div class="container py-5">
     <div class="row g-4">
         <!-- Card 1 -->
@@ -100,6 +113,7 @@
         </div>
     </div>
 </div>
+
 <jsp:include page="footer.jsp"/>
 <script type="text/javascript" src="/js/home.js"></script>
 </body>

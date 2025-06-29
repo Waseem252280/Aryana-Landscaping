@@ -6,9 +6,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commercial Landscaping</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Commercial Landscaping Services Dubai | Aryana Landscaping</title>
+    <meta name="description" content="Top-rated commercial landscaping services in Dubai by Aryana Landscaping. We offer office landscaping, exterior design, maintenance, and customized green space solutions for businesses.">
+    <meta name="keywords" content="Commercial Landscaping Dubai, Landscaping Services Dubai, Office Landscaping, Outdoor Office Design, Corporate Garden Design, Landscape Maintenance Dubai, Lawn Services, Tree Transplanting, Exterior Living Spaces, Irrigation Systems, Artificial Grass Dubai, Pergola Design, Gazebo Design, Dubai Landscaping Company, Commercial Garden Maintenance, Garden Landscaping UAE, Aryana Landscaping, Landscaping Contractors Dubai">
+
+    <!-- ✅ Open Graph Meta Tags -->
+    <meta property="og:title" content="Commercial Landscaping Services Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Aryana Landscaping provides expert commercial landscaping services including design, maintenance, and soft/hard landscaping solutions in Dubai.">
+    <meta property="og:image" content="/images/commercialheading.jpeg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/commercial">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 <!-- Right Section -->

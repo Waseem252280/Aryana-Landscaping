@@ -4,11 +4,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soft Landscaping</title>
+    <title>Soft Landscaping Dubai | Garden Design & Lawn Services - Aryana Landscaping</title>
+    <meta name="description" content="Aryana Landscaping provides expert soft landscaping services in Dubai. From garden revamps to tree care, we enhance your outdoor space with nature’s beauty.">
+    <meta name="keywords" content="Soft landscaping Dubai, Garden design Dubai, Planting services Dubai, Lawn care Dubai, Aryana Landscaping, Landscaping Dubai">
+    <meta name="author" content="Aryana Landscaping & Gardening Works and Maintenance">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.aryaanalandscape.com/soft-landscaping"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/soft-landscaping">
+    <meta property="og:title" content="Soft Landscaping Dubai | Garden Design & Lawn Services - Aryana Landscaping">
+    <meta property="og:description" content="Transform your garden with soft landscaping in Dubai. Aryana Landscaping offers tree care, mulching, planting, and more. Call us now!">
+    <meta property="og:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/softlandscapingheading.jpg">
+    <meta property="og:site_name" content="Aryana Landscaping Dubai">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.aryaanalandscape.com/soft-landscaping">
+    <meta name="twitter:title" content="Soft Landscaping Dubai | Garden Design & Lawn Services - Aryana Landscaping">
+    <meta name="twitter:description" content="Dubai’s top soft landscaping company offering garden makeovers, irrigation, and plantation services. Contact Aryana Landscaping today.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/softlandscapingheading.jpg">
+
+    <!-- Geo & Business Info -->
+    <meta name="geo.region" content="AE-DU" />
+    <meta name="geo.placename" content="Dubai" />
+    <meta name="geo.position" content="25.276987;55.296249" />
+    <meta name="ICBM" content="25.276987, 55.296249" />
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Aryana Landscaping & Gardening Works and Maintenance",
+            "image": "https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/softlandscapingheading.jpg",
+            "url": "https://www.aryaanalandscape.com",
+            "telephone": "+971556736250",
+            "email": "rasheedite@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Office # 404 Dalmook building, Al Marrar Deira",
+                "addressLocality": "Dubai",
+                "addressRegion": "Dubai",
+                "addressCountry": "AE"
+            },
+            "openingHours": "Mo-Sa 09:00-18:00",
+            "priceRange": "$$"
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.svg">
+
+    <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 

@@ -4,9 +4,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryana Water Features Services</title>
+    <title>Water Features Services in Dubai | Aryana Landscaping</title>
+    <meta name="description" content="Add beauty to your garden with water features like fountains, ponds, and pools. Aryana Landscaping offers expert design and installation services in Dubai.">
+    <meta name="keywords" content="water features Dubai, garden fountain Dubai, outdoor water fountain installation, garden ponds Dubai, backyard water features Dubai">
+    <meta name="author" content="Aryana Landscaping & Gardening Works and Maintenance">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.aryaanalandscape.com/water-features" />
+
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Garden Water Features Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Create a tranquil and elegant garden with Aryana Landscaping's custom water features including fountains, ponds, and pools in Dubai.">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/water-features">
+    <meta property="og:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/water-feature-cover.jpg">
+    <meta property="og:site_name" content="Aryana Landscaping Dubai">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Outdoor Water Features Dubai | Fountains, Ponds, Pools">
+    <meta name="twitter:description" content="Aryana Landscaping provides expert water feature installation services in Dubai. Add elegance and tranquility to your outdoor space with custom fountains and ponds.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/water-feature-cover.jpg">
+    <meta name="twitter:url" content="https://www.aryaanalandscape.com/water-features">
+
+    <!-- Local Business Info -->
+    <meta name="geo.region" content="AE-DU" />
+    <meta name="geo.placename" content="Dubai" />
+    <meta name="geo.position" content="25.276987;55.296249" />
+    <meta name="ICBM" content="25.276987, 55.296249" />
+
+    <!-- Structured Data: LocalBusiness & Service -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Water Features Installation",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Aryana Landscaping & Gardening Works and Maintenance",
+                "image": "https://www.aryaanalandscape.com/favicon.svg",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Dubai",
+                    "addressCountry": "AE"
+                },
+                "url": "https://www.aryaanalandscape.com",
+                "telephone": "+971556736250"
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": "Dubai, UAE"
+            },
+            "description": "Aryana Landscaping offers expert design and installation of water features like fountains, garden ponds, pools, and more throughout Dubai and the UAE."
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>

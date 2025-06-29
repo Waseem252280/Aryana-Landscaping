@@ -6,8 +6,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryana Landscaping Services</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Professional Landscaping Services in Dubai | Aryana Landscaping</title>
+    <meta name="description" content="Aryana Landscaping offers expert landscaping services in Dubai including design, maintenance, hard & soft landscaping, and garden transformations.">
+    <meta name="keywords" content="Landscaping Dubai, Professional Landscaping in Dubai, Best Landscaping Company in Dubai, Garden Landscaping, Landscaping Design UAE, Hard Landscaping, Soft Landscaping, Gazebo and Pergolas, Garden Maintenance, Residential Landscaping, Commercial Landscaping, Villa Landscaping">
+
+    <!-- ✅ Open Graph Meta (Social Media) -->
+    <meta property="og:title" content="Professional Landscaping Services in Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Transform your outdoor space with Aryana Landscaping - Dubai's leading landscaping company for design, maintenance, and hard & soft landscaping.">
+    <meta property="og:image" content="https://www.aryanalandscape.com/images/landscapingservice1.jpg">
+    <meta property="og:url" content="https://www.aryanalandscape.com/landscapingservice">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Styles -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- ✅ JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LandscapingCompany",
+            "name": "Aryana Landscaping & Gardening Works and Maintenance",
+            "image": "https://www.aryanalandscape.com/images/landscapingservice1.jpg",
+            "url": "https://www.aryanalandscape.com/landscapingservice",
+            "telephone": "+971-556736250",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Office No. 404, M3 (Dalmook) Building, Al Marar, Deira",
+                "addressLocality": "Dubai",
+                "postalCode": "48670",
+                "addressCountry": "UAE"
+            },
+            "description": "Aryana Landscaping provides premium landscaping services in Dubai including hard and soft landscaping, garden design, maintenance, and construction for residential and commercial properties.",
+            "areaServed": "Dubai",
+            "keywords": [
+                "Landscaping Dubai",
+                "Professional Landscaping in Dubai",
+                "Best Landscaping Company in Dubai",
+                "Garden Landscaping",
+                "Hard Landscaping",
+                "Soft Landscaping",
+                "Villa Landscaping",
+                "Commercial Landscaping",
+                "Gazebo and Pergolas",
+                "Garden Maintenance"
+            ]
+        }
+    </script>
 </head>
 <body>
 <jsp:include page="header.jsp"/>

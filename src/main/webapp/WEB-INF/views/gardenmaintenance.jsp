@@ -6,9 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garden Maintenance</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Garden Maintenance Dubai | Aryana Landscaping Services</title>
+    <meta name="description" content="Get reliable garden maintenance services in Dubai by Aryana Landscaping. We offer irrigation, trimming, planting, grass maintenance & more at affordable prices.">
+    <meta name="keywords" content="Garden Maintenance Dubai, Gardening Services Dubai, Garden Trimming Dubai, Garden Irrigation Dubai, Lawn Maintenance Dubai, Aryana Landscaping, Grass Cutting Dubai, Garden Upkeep, Garden Cleaning Dubai, Garden Landscaping UAE">
+
+    <!-- ✅ Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Affordable Garden Maintenance Services in Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Aryana Landscaping offers expert garden maintenance in Dubai including irrigation, trimming, and lawn care. Trusted by homes & businesses across the UAE.">
+    <meta property="og:image" content="/images/gardenmaintenanceheading.jpeg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/gardenmaintenance">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- ✅ Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 <!-- Right Section -->

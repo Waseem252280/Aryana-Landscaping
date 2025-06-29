@@ -6,7 +6,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Contact Aryana Landscaping | Landscaping Services in Dubai</title>
+    <meta name="description" content="Contact Aryana Landscaping, the top-rated landscaping company in Dubai. Reach out for villa landscaping, garden maintenance, pergola construction, and more.">
+    <meta name="keywords" content="Contact Landscaping Dubai, Landscaping Company Dubai, Aryana Landscaping, Garden Maintenance Dubai, Landscaping Contractor, Pergola Dubai, Gazebo Dubai, Artificial Grass Installation, Commercial Landscaping, Villa Landscaping, Landscaping Services Dubai, Get in Touch Landscaping Dubai">
+
+    <!-- ✅ Open Graph Meta Tags for social sharing -->
+    <meta property="og:title" content="Contact Aryana Landscaping | Landscaping Experts in Dubai">
+    <meta property="og:description" content="Have questions or need a quote? Contact Aryana Landscaping today. We specialize in villa landscaping, pergolas, gazebos, artificial grass, and more.">
+    <meta property="og:image" content="/images/commercialheading.jpeg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/contact">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <link rel="stylesheet" type="text/css" href="/css/contactus.css">
 </head>
 <body>

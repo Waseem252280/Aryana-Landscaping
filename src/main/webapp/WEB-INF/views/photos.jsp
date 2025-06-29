@@ -82,9 +82,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos</title>
+    <title>Pergola & Landscaping Photo Gallery in Dubai | Aryana Landscaping</title>
+    <meta name="description" content="Explore our high-quality pergola designs and landscaping photos in Dubai. Aryana Landscaping offers expert garden, villa, and outdoor space designs.">
+    <meta name="keywords" content="Pergola Designs Dubai, Landscaping Photos UAE, Villa Garden Design, Pergola Installation, Aryana Landscaping">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Pergola & Landscaping Photo Gallery | Aryana Landscaping Dubai">
+    <meta property="og:description" content="See our pergola and landscaping work in Dubai. Creative, modern, and traditional garden designs.">
+    <meta property="og:image" content="https://res.cloudinary.com/dqr2rknbm/image/upload/v1710000000/pergola-cover.jpg">
+    <meta property="og:url" content="https://aryaanalandscape.com/photos">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon (optional but recommended) -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 

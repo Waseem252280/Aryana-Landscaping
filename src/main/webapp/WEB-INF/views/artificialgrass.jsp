@@ -6,7 +6,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artificial Grass Installation</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Artificial Grass Installation Dubai | Aryana Landscaping</title>
+    <meta name="description" content="Aryana Landscaping provides top-quality artificial grass installation in Dubai. We supply, install, and maintain synthetic turf for homes, balconies, terraces, gardens, sports grounds, and swimming pools across UAE.">
+    <meta name="keywords" content="Artificial Grass Dubai, Artificial Grass Installation, Fake Grass Installation, Synthetic Turf, Artificial Grass Carpet Dubai, Garden Turf Dubai, Swimming Pool Grass, Balcony Grass, Terrace Grass, Indoor Turf Dubai, Artificial Grass Maintenance, Artificial Grass Cleaning, Artificial Turf Dubai, Lawn Grass UAE, Dubai Landscaping, Gardening Dubai, Villa Landscaping, Commercial Landscaping, Pergola Design, Gazebo Design, Landscaping Company in Dubai, Aryana Landscaping">
+
+    <!-- ✅ Open Graph (Social Preview) -->
+    <meta property="og:title" content="Artificial Grass Installation Dubai | Aryana Landscaping">
+    <meta property="og:description" content="We specialize in artificial grass installation across Dubai. Maintenance, cleaning, and expert turf solutions for all property types.">
+    <meta property="og:image" content="/images/artificialgrassheading.jpeg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/artificialgrass">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
@@ -41,7 +56,7 @@
 
         <!-- Image Content -->
         <div class="col-lg-6">
-            <img src="images/artificialgrass1.jpeg" class="img-fluid rounded" alt="Garden 1">
+            <img src="images/artificialgrass1.jpg" class="img-fluid rounded" alt="Garden 1">
         </div>
     </div>
 </section>

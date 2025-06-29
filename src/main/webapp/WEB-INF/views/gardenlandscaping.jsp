@@ -6,9 +6,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garden Landscaping</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <title>Garden Landscaping Dubai | Aryana Landscaping Services</title>
+    <meta name="description" content="Aryana Landscaping offers top-rated garden landscaping services in Dubai including design, maintenance, and architecture for residential & commercial gardens.">
+    <meta name="keywords" content="Garden Landscaping Dubai, Landscaping Services Dubai, Garden Design Dubai, Garden Architecture Dubai, Gardening Company in Dubai, Aryana Landscaping, Garden Renovation, Landscaping Contractor UAE, Garden Consultant Dubai, Soft Landscaping, Hard Landscaping, Dubai Villa Landscaping">
+
+    <!-- ✅ Open Graph Meta Tags -->
+    <meta property="og:title" content="Best Garden Landscaping Services in Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Aryana Landscaping provides expert garden landscaping services in Dubai – from designing and renovation to maintenance. Trusted by Dubai residents and businesses.">
+    <meta property="og:image" content="/images/gardenlandscapingheading.jpg">
+    <meta property="og:url" content="https://www.aryaanalandscape.com/gardenlandscaping">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- ✅ Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
 <jsp:include page="header.jsp"/>
 <!-- Right Section -->

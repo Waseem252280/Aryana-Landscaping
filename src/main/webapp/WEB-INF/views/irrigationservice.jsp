@@ -6,8 +6,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irrigation Services</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Irrigation System Installation & Services in Dubai | Aryana Landscaping</title>
+    <meta name="description" content="Aryana Landscaping offers expert irrigation services in Dubai including drip irrigation, sprinkler systems, and water-efficient garden irrigation solutions.">
+    <meta name="keywords" content="Irrigation Services Dubai, Drip Irrigation Dubai, Garden Irrigation Dubai, Sprinkler Installation Dubai, Irrigation Maintenance, Water Tank Installation, Surface Irrigation, Landscaping Dubai, Best Landscaping Company in Dubai, Garden Maintenance Dubai, Professional Landscaping in Dubai">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Irrigation System Installation & Services in Dubai | Aryana Landscaping">
+    <meta property="og:description" content="Leading irrigation service provider in Dubai. Drip systems, sprinkler installation, and water management solutions.">
+    <meta property="og:image" content="https://www.aryanalandscape.com/images/irrigation1.jpg">
+    <meta property="og:url" content="https://www.aryanalandscape.com/irrigationservices">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon and Styles -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LandscapingCompany",
+            "name": "Aryana Landscaping & Gardening Works and Maintenance",
+            "image": "https://www.aryanalandscape.com/images/irrigation1.jpg",
+            "url": "https://www.aryanalandscape.com/irrigationservices",
+            "telephone": "+971-556736250",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Office No. 404, M3 (Dalmook) Building, Al Marar, Deira",
+                "addressLocality": "Dubai",
+                "postalCode": "48670",
+                "addressCountry": "AE"
+            },
+            "description": "Aryana Landscaping is a top-rated irrigation services company in Dubai offering advanced irrigation system design, installation, and maintenance services including sprinkler, drip, manual, and garden irrigation.",
+            "areaServed": "Dubai",
+            "serviceType": [
+                "Irrigation System Installation",
+                "Drip Irrigation",
+                "Sprinkler Irrigation",
+                "Garden Irrigation",
+                "Surface Irrigation",
+                "Manual Irrigation",
+                "Water Tank Installation",
+                "Irrigation Design",
+                "Irrigation Maintenance",
+                "Garden Watering Systems"
+            ],
+            "keywords": [
+                "Irrigation Services Dubai",
+                "Drip Irrigation Dubai",
+                "Sprinkler Irrigation Dubai",
+                "Garden Irrigation System Dubai",
+                "Irrigation Design Dubai",
+                "Best Irrigation Company in Dubai",
+                "Water Tank Installation Dubai",
+                "Irrigation Maintenance Services",
+                "Garden Sprinkler Installation",
+                "Irrigation System Supplier in Dubai",
+                "Residential Irrigation Dubai",
+                "Commercial Irrigation Dubai",
+                "Affordable Irrigation Systems",
+                "Dubai Landscaping",
+                "Professional Landscaping in Dubai",
+                "Best Landscaping in Dubai",
+                "Landscaping Dubai"
+            ]
+        }
+    </script>
+
 </head>
 <body>
 <jsp:include page="header.jsp"/>
