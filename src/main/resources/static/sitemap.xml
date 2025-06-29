@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.aryaanalandscape.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About / Contact -->
+    <url><loc>https://www.aryaanalandscape.com/aboutus</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/contactus</loc></url>
+
+    <!-- Landscaping Services (Main Keywords) -->
+    <url><loc>https://www.aryaanalandscape.com/villalandscaping</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/residentiallandscaping</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/commerciallandscaping</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/artificialgrass</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/pergolaconstruction</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/gazeboconstruction</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/gardenmaintenance</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/gardenlandscaping</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/irrigationservice</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/pergoladesign</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/gazebodesign</loc></url>
+
+    <!-- Other Core Services -->
+    <url><loc>https://www.aryaanalandscape.com/waterfeatures</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/hardlandscaping</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/softlandscaping</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/gardeningservice</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/gazeboandpergolas</loc></url>
+
+    <!-- Gallery -->
+    <url><loc>https://www.aryaanalandscape.com/photos</loc></url>
+    <url><loc>https://www.aryaanalandscape.com/videos</loc></url>
+
+</urlset>
